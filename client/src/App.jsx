@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 // import { imagiFY } from './assets'
 import { CreatePost, Homepage } from './pages'
+import Footer from './components/Footer'
 // import './App.css'
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
           <Route path='/create-post' element={<CreatePost />} />
         </Routes>
       </main>
+      <Footer></Footer>
     </BrowserRouter>
   )
 }
