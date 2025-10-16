@@ -1,8 +1,9 @@
 import React from 'react'
 
 const Footer = () => {
+  const year = new Date().getFullYear()
   return (
-    <footer className="bg-white">
+    <footer className="bg-white dark:bg-gray-900">
   <div className="mx-auto max-w-screen-xl px-4 py-14 sm:px-6 lg:px-8">
     <div className="lg:flex lg:items-start lg:gap-8">
       <div className="text-teal-600">
@@ -17,36 +18,36 @@ const Footer = () => {
       <div className="mt-8 grid grid-cols-2 gap-8 lg:mt-0 lg:grid-cols-5 lg:gap-y-16">
         <div className="col-span-2">
           <div>
-            <h2 className="text-2xl font-bold text-gray-900">Be in the loop!</h2>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Be in the loop!</h2>
 
-            <p className="mt-4 text-gray-500">
+            <p className="mt-4 text-gray-500 dark:text-gray-400">
               I keep building cool stuff. If you want to know more, just sign up for my newsletter.
             </p>
           </div>
         </div>
 
-        {/* <div className="col-span-2 lg:col-span-3 lg:flex lg:items-end">
-          <form className="w-full">
+        <div className="col-span-2 lg:col-span-3 lg:flex lg:items-end">
+          <form className="w-full" onSubmit={(e) => e.preventDefault()}>
             <label htmlFor="UserEmail" className="sr-only"> Email </label>
 
             <div
-            className="border rounded-md border-gray-400 p-2 focus-within:ring sm:flex sm:items-center sm:gap-4"
+              className="rounded-md border border-gray-300 dark:border-gray-700 p-2 sm:flex sm:items-center sm:gap-4 bg-white dark:bg-gray-800"
             >
               <input
                 type="email"
                 id="UserEmail"
-                placeholder="john@rhcp.com"
-                className="w-full border-none focus:border-transparent focus:ring-transparent sm:text-sm"
+                placeholder="you@example.com"
+                className="w-full bg-transparent text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 border-none focus:border-transparent focus:ring-0 sm:text-sm"
               />
 
               <button
-                className="mt-1 w-full rounded-md bg-teal-500 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition-none hover:bg-teal-600 sm:mt-0 sm:w-auto sm:shrink-0"
+                className="mt-2 w-full rounded-md bg-teal-600 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white transition-colors duration-200 hover:bg-teal-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 sm:mt-0 sm:w-auto sm:shrink-0"
               >
                 Sign Up
               </button>
             </div>
           </form>
-        </div> */}
+        </div>
 
         {/* <div className="col-span-2 sm:col-span-1">
           <p className="font-medium text-gray-900">Services</p>
@@ -152,7 +153,7 @@ const Footer = () => {
               href="https://www.facebook.com/ig.andybeas/"
               rel="noreferrer"
               target="_blank"
-              className="text-gray-700 transition hover:opacity-75"
+              className="text-gray-600 dark:text-gray-300 transition-colors duration-200 hover:text-teal-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 rounded"
             >
               <span className="sr-only">Facebook</span>
 
@@ -171,7 +172,7 @@ const Footer = () => {
               href="https://www.instagram.com/ig.andybeas/"
               rel="noreferrer"
               target="_blank"
-              className="text-gray-700 transition hover:opacity-75"
+              className="text-gray-600 dark:text-gray-300 transition-colors duration-200 hover:text-teal-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 rounded"
             >
               <span className="sr-only">Instagram</span>
 
@@ -190,7 +191,7 @@ const Footer = () => {
               href="https://twitter.com/_andybeas_"
               rel="noreferrer"
               target="_blank"
-              className="text-gray-700 transition hover:opacity-75"
+              className="text-gray-600 dark:text-gray-300 transition-colors duration-200 hover:text-teal-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 rounded"
             >
               <span className="sr-only">Twitter</span>
 
@@ -207,7 +208,7 @@ const Footer = () => {
               href="https://github.com/andybeas"
               rel="noreferrer"
               target="_blank"
-              className="text-gray-700 transition hover:opacity-75"
+              className="text-gray-600 dark:text-gray-300 transition-colors duration-200 hover:text-teal-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 rounded"
             >
               <span className="sr-only">GitHub</span>
 
@@ -243,21 +244,21 @@ const Footer = () => {
       </div>
     </div>
 
-    <div className="mt-8 border-t border-gray-100 pt-8">
+    <div className="mt-8 border-t border-gray-100 dark:border-gray-800 pt-8">
       <div className="sm:flex sm:justify-between">
-        <p className="text-xs text-gray-500">&copy; 2024. Sayan Deb. All rights reserved.</p>
+        <p className="text-xs text-gray-500 dark:text-gray-400"><span>&copy;</span> {year}. Sayan Deb. All rights reserved.</p>
 
         <ul className="mt-8 flex flex-wrap justify-start gap-4 text-xs sm:mt-0 lg:justify-end">
           <li>
-            <a href="#" className="text-gray-500 transition hover:opacity-75"> Terms & Conditions </a>
+            <a href="#" className="text-gray-500 dark:text-gray-400 transition-colors duration-200 hover:text-teal-600"> Terms & Conditions </a>
           </li>
 
           <li>
-            <a href="#" className="text-gray-500 transition hover:opacity-75"> Privacy Policy </a>
+            <a href="#" className="text-gray-500 dark:text-gray-400 transition-colors duration-200 hover:text-teal-600"> Privacy Policy </a>
           </li>
 
           <li>
-            <a href="#" className="text-gray-500 transition hover:opacity-75"> Cookies </a>
+            <a href="#" className="text-gray-500 dark:text-gray-400 transition-colors duration-200 hover:text-teal-600"> Cookies </a>
           </li>
         </ul>
       </div>
